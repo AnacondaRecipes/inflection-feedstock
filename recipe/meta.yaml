@@ -20,18 +20,27 @@ requirements:
   host:
     - python
     - setuptools
-
+    - pip
+    - wheel
   run:
     - python
 
 test:
   imports:
     - {{ name }}
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: http://github.com/jpvanhal/inflection
+  home: https://github.com/jpvanhal/inflection
   license: MIT
-  summary: 'A port of Ruby on Rails inflector to Python'
+  license_family: MIT
+  license_file: LICENSE
+  summary: A port of Ruby on Rails inflector to Python
+  dev_url: https://github.com/jpvanhal/inflection
+  doc_url: https://inflection.readthedocs.io/
 
 extra:
   recipe-maintainers:
